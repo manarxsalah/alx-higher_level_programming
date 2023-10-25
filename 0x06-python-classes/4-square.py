@@ -8,14 +8,13 @@ class Square:
     def __init__(self, size=0):
         """Initialize instance
         Args:
-            size: lengh of a side of the square
+            size: length of a side of the square
         """
         self.size = size
 
     @property
     def size(self):
         """Property for the length of a side of this square
-
         Raises:
             TypeError: if size is not an int
             ValueError: if size is less than 0

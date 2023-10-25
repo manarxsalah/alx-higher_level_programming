@@ -3,13 +3,13 @@
 
 
 class Square:
-    """Def a square"""
+    """Defines a square"""
 
     def __init__(self, size=0):
         """Initialize instance
         Args:
             size: lgth of a side of the square
-        raises:
+        Raises:
             TypeError: If size is not an int
             ValueError: If size is less than 0
         """
