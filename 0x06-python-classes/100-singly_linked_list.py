@@ -23,7 +23,7 @@ class Node:
     def data(self, value):
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
-        self.data = value
+        self.__data = value
 
     @property
     def next_node(self):
@@ -51,7 +51,7 @@ class SinglyLinkedList:
             Value (Node): the new node to insert
         """
         new = Node(value)
-        id self.__head is None:
+        if self.__head is None:
             new.next_node = None
             self.__head = new
         elif self.__head.data > value:
