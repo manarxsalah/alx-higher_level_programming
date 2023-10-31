@@ -63,10 +63,10 @@ class Rectangle:
 
     def __str__(self):
         """returns printable str representation of the rectangle"""
-        if not self.width or not self.height:
+        string = ""
+        if self.__width == 0 or self.__height == 0:
             return ""
-        return ((str(self.print_symbol) * self.width + "\n") *
-                self.height)[:-1]
+        return (self.__height * (("#" * self.__width) + "\n"))[:-1]
 
     def __repr__(self):
         """returns a str representation for reproduction"""
@@ -92,7 +92,7 @@ class Rectangle:
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
-            raise TypeError("rect_2 mudt be an instance of Rectangle")
+            raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_2.area() > rect_1.area():
             return rect_2
         return rect_1
